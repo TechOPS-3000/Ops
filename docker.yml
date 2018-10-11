@@ -16,3 +16,10 @@
           - curl
           - gnupg2
           - software-properties-common
+
+  - name: Ajout de la clé Docker
+    apt_key:
+     url: https://download.docker.com/linux/debian/gpg 
+     state: present
+     id: 0EBFCD88
+     state: present 
