@@ -7,3 +7,12 @@
   - name: Mise à jour APT
     apt:
      update_cache: yes
+
+  - name: Installation des composants pour Docker
+    apt: name={{item}} state=installed
+    with_items:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - gnupg2
+          - software-properties-common
